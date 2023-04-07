@@ -1,5 +1,4 @@
 import { ActionPanel, Detail, List, Action, getPreferenceValues, Icon } from "@raycast/api";
-import { parse } from "csv-parse";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -22,11 +21,10 @@ export default function Command() {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          "https://raw.githubusercontent.com/f/awesome-chatgpt-prompts/main/prompts.csv"
+          "https://raw.githubusercontent.com/PlexPt/awesome-chatgpt-prompts-zh/main/prompts-zh.json"
         );
-        parse(response.data, { columns: true }, (err, records) => {
-          setData(records);
-        });
+        //const result = await response.data;
+        setData(response.data);
       } catch (error) {
         console.error(error);
       } finally {

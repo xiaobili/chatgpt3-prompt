@@ -1,12 +1,13 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "chatgpt3-prompt",
-  "title": "ChatGPT3 Prompt",
+  "name": "chatgpt3-prompt-zh",
+  "title": "ChatGPT3 Prompt Chinese",
   "description": "Prompt list for interacting with ChatGPT3",
   "icon": "command-icon.png",
   "author": "denizyoldas",
   "contributors": [
-    "pernielsentikaer"
+    "pernielsentikaer",
+    "xiaobili"
   ],
   "categories": [
     "Data"
@@ -20,12 +21,6 @@
       "mode": "view",
       "preferences": [
         {
-          "name": "primaryAction",
-          "type": "dropdown",
-          "description": "The primary action to perform on a selected prompt.",
-          "required": false,
-          "title": "Primary Action",
-          "default": "copy",
           "data": [
             {
               "title": "Paste to Active App",
@@ -35,7 +30,13 @@
               "title": "Copy to Clipboard",
               "value": "copy"
             }
-          ]
+          ],
+          "default": "copy",
+          "description": "The primary action to perform on a selected prompt.",
+          "name": "primaryAction",
+          "required": false,
+          "title": "Primary Action",
+          "type": "dropdown"
         }
       ]
     }
